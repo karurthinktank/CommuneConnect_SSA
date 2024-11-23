@@ -1,0 +1,23 @@
+dispatch:
+  - url: "backend-dot-thinktank-tms-dev-env.as.r.appspot.com/api/*"
+    service: backend
+  - url: "microfin-backend-dot-thinktank-tms-dev-env.as.r.appspot.com/api/*"
+    service: microfin-backend
+  - url: "*/pdfrose"
+    service: pdfdownload
+  - url: "*/font"
+    service: pdfdownload
+  - url: "*/pdfWhite"
+    service: pdfdownload
+  - url: "*/pdfgreen"
+    service: pdfdownload
+  - url: "*/pdfport"
+    service: pdfdownload
+  - url: "thinktank-tms-dev-env.as.r.appspot.com/static/*"
+    service: default
+  - url: "thinktank-tms-dev-env.as.r.appspot.com/*"
+    service: default
+  - url: "microfin-frontend-dot-thinktank-tms-dev-env.as.r.appspot.com/*"
+    service: microfin-frontend
+  - url: "microfin-frontend-dot-thinktank-tms-dev-env.as.r.appspot.com/static/*"
+    service: microfin-frontend

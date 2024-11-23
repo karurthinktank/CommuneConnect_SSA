@@ -1,0 +1,265 @@
+.id-cover{
+	position:relative;
+	display: inline-flex;
+}
+.vertical-front-img , .vertical-back-img{
+	width: 400px !important;
+}
+#backdropImg{
+	background: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    transform: scale(3);
+	display: none;
+}
+.id-vertical .user-content {
+	width: 400px;
+	height: 650px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.id-horizontal .user-content { 
+	width: 636px;
+	height: 395px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.horizontal-front-img , .horizontal-back-img {
+	width:636px;
+}
+.id-photo, .id-name, .id-reg-no, .id-address, .id-phone-no {
+	position: absolute;
+	color: #000000;
+	font-weight: 800;
+	font-size: 14px !important;
+}
+.id-vertical .id-photo {
+	width: 115px;
+	height: 115px;
+	bottom: 86px;
+	left: 143px;
+	border: 3px solid #9e005e;
+}
+
+.id-vertical .id-name {
+	bottom: 42px;
+	left: 155px;
+} 
+.id-vertical .id-reg-no {
+	bottom: 10px;
+	left: 195px;
+}
+.id-vertical .id-address {
+	bottom: 142px;
+	left: 40px;
+	width: 340px;
+	font-size: 14px;
+}
+.id-vertical .id-phone-no{
+	bottom: 88px;
+	left: 225px;
+	font-size: 16px;
+}
+.id-horizontal .id-photo {
+	width: 115px;
+	height: 115px;
+	bottom: 108px;
+	right: 94px;
+}
+.id-horizontal .id-name {
+	bottom: 61px;
+	left: 442px;
+	font-size: 14px;
+}
+.id-horizontal .id-reg-no {
+	bottom: 29px;
+	left: 473px;
+}
+.id-horizontal .id-address {
+	bottom: 275px;
+	left: 357px;
+	width: 260px;
+	top: 44px;
+}
+.id-horizontal .id-phone-no {
+	bottom: 175px;
+	left: 498px;
+	font-size: 18px;
+}
+
+/* Add these styles at the end of your SCSS file */
+
+@media (min-width :890px) and  (max-width: 900px) {
+ .id-horizontal.card {
+   /* Adjust the styles for smaller screens */
+   /* For example, you can set a smaller width or adjust margins/paddings */
+   width: 100%;
+   margin: 0;
+  padding: 10px;
+
+ }
+
+  /* You may need to adjust other styles within the card content as well */
+  .id-horizontal.card .d-flex {
+	justify-content: center;
+  }
+
+  .id-horizontal.card .row {
+	justify-content: center;
+  }
+
+ .id-horizontal.card .col-md-8,
+ .id-horizontal.card .col-sm-4,
+ .id-horizontal.card .col-lg-5 {
+   width: 100%;
+}
+}
+
+// .id-cover {
+// 	position: relative;
+//   }
+
+//   .vertical-front-img,
+//   .vertical-back-img,
+//   .horizontal-front-img,
+//   .horizontal-back-img {
+// 	width: 100%; /* Use 100% width for responsive images */
+// 	height: auto; /* Maintain aspect ratio */
+//   }
+
+//   .user-content {
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// 	width: 100%; /* Use 100% width for responsive container */
+//   }
+
+//   /* ID vertical */
+//   .id-vertical .id-photo {
+// 	width: 115px;
+// 	height: 115px;
+// 	bottom: 10%; /* Adjust bottom percentage as needed */
+// 	left: 25%; /* Adjust left percentage as needed */
+// 	border: 3px solid #9e005e;
+//   }
+
+//   .id-vertical .id-name {
+// 	bottom: 5%; /* Adjust bottom percentage as needed */
+// 	left: 30%; /* Adjust left percentage as needed */
+//   }
+
+//   .id-vertical .id-reg-no {
+// 	bottom: 2%; /* Adjust bottom percentage as needed */
+// 	left: 37%; /* Adjust left percentage as needed */
+//   }
+
+//   .id-vertical .id-address {
+// 	bottom: 20%; /* Adjust bottom percentage as needed */
+// 	left: 10%; /* Adjust left percentage as needed */
+// 	width: 80%; /* Adjust width percentage as needed */
+// 	font-size: 14px;
+//   }
+
+//   .id-vertical .id-phone-no {
+// 	bottom: 12%; /* Adjust bottom percentage as needed */
+// 	left: 50%; /* Adjust left percentage as needed */
+// 	font-size: 16px;
+//   }
+
+//   /* ID horizontal */
+//   .id-horizontal .id-photo {
+// 	width: 115px;
+// 	height: 115px;
+// 	bottom: 10%; /* Adjust bottom percentage as needed */
+// 	right: 10%; /* Adjust right percentage as needed */
+// 	border: 4px solid #aa196b;
+//   }
+
+//   .id-horizontal .id-name {
+// 	bottom: 5% !important; /* Adjust bottom percentage as needed */
+// 	left: 60% !important; /* Adjust left percentage as needed */
+// 	font-size: 14px;
+//   }
+
+//   .id-horizontal .id-reg-no {
+// 	bottom: 2% !important; /* Adjust bottom percentage as needed */
+// 	left: 65% !important; /* Adjust left percentage as needed */
+//   }
+
+//   .id-horizontal .id-address {
+// 	bottom: 20%; /* Adjust bottom percentage as needed */
+// 	left: 40%; /* Adjust left percentage as needed */
+// 	width: 50%; /* Adjust width percentage as needed */
+// 	font-size: 14px;
+//   }
+
+//   .id-horizontal .id-phone-no {
+// 	bottom: 12%; /* Adjust bottom percentage as needed */
+// 	left: 55%; /* Adjust left percentage as needed */
+// 	font-size: 18px;
+//   }
+
+@media print {
+	body {
+		margin: 10% !important;
+		padding: 0 !important;
+	  }
+
+	.id-cover{
+		position: relative;;
+		display: inline-flex;
+	}
+	.horizontal-front-img{
+		width: 636px;
+	}
+	.user-content { 
+		width: 636px;
+		height: 395px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.id-photo {
+		position: absolute;
+		color: #000000;
+		font-weight: 800;
+		font-size: 14px !important;
+		width: 115px;
+		height: 115px;
+		bottom: 102px;
+		right: 104px;
+	}
+
+	.id-name {
+		position: absolute;
+		color: #000000;
+		font-weight: 800;
+		font-size: 14px !important;
+		bottom: 57px;
+		left: 433px;
+		font-size: 14px;
+	} 
+	.id-reg-no {
+		bottom: 28px;
+		left: 461px;
+	}
+	 .id-address {
+		bottom: 275px;
+		left: 350px;
+		width: 260px;
+		top:54px
+	}
+	 .id-phone-no{
+		bottom: 165px;
+		left: 488px;
+		font-size: 18px;
+	}
+	
+}

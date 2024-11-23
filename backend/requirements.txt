@@ -1,0 +1,11 @@
+Django
+psycopg2
+django-cors-headers
+django-guardian
+djangorestframework
+djangorestframework-simplejwt
+requests
+Pillow
+sendgrid
+sendgrid-mail
+google-cloud-storage

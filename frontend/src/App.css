@@ -1,0 +1,126 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+.spinner span{
+  width:15px !important;
+  height: 15px !important; 
+  background: red !important;
+}
+
+.spinner{
+  width: 57px!important;
+}
+body{
+  font-family: Roboto,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+}
+
+/* .background-image {
+  background-image: 
+  background-color: rgba(255, 255, 255, 0.8);
+  background-size: cover;
+  height: 100vh;
+} */
+
+
+.temple-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+body{
+  background: #c9ccd1; 
+  }
+  .form-style input{
+    border:0;
+    height:50px;
+    border-radius:0;
+  border-bottom:1px solid #ebebeb;	
+  }
+  .form-style input:focus{
+  border-bottom:1px solid #007bff;	
+  box-shadow:none;
+  outline:0;
+  background-color:#ebebeb;	
+  }
+  .sideline {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    color:#ccc;
+  }
+  /* button{
+  height:50px;	
+  } */
+  .sideline:before,
+  .sideline:after {
+      content: '';
+      border-top: 1px solid #ebebeb;
+      margin: 0 20px 0 0;
+      flex: 1 0 20px;
+  }
+  
+  .sideline:after {
+      margin: 0 0 0 20px;
+  }
+  .preview-container {
+    margin-top: 20px;
+    border: 1px solid #c9ccd1;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Style for the previewed image */
+  .preview-image {
+    /* max-width: 100%; */
+    max-height: 120px; /* Adjust the maximum height as needed */
+    display: inline-block;
+    margin: 10px 0;
+  }
+  .header-logo h3{
+    border-radius: 20px !important;
+  }
+
+Input[type=number]::-webkit-inner-spin-button, 
+Input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}

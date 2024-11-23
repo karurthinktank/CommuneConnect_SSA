@@ -1,0 +1,152 @@
+
+.p-datatable-thead{
+  font-size: 14px;
+  }
+  .p-datatable-header{
+    padding: 5px !important;
+  }
+.green-cell {
+  background-color: green;
+  color: white; 
+  padding: 10px !important;
+  border-radius: 8px;
+}
+
+.red-cell {
+  background-color: red;
+  color: white;
+  padding: 10px !important; 
+  border-radius: 15px;
+}
+.custom-border{
+  border: 2px solid #dee2e6 !important;
+}
+.user-profile .header-profile-user{
+  width: 70px !important;
+  height: 70px !important;
+}
+// .datatable-container{
+//   // max-width: 100% !important;  
+//   //  height: 200px !important; 
+//   // overflow-x:scroll ;
+//   width: 100% !important; 
+//   // overflow-x: scroll;
+//   // white-space: nowrap;
+//   // width: 100% !important; 
+//   // height: 500px; /* Set your desired height */
+//   // overflow-x: scroll !important;
+// }
+
+@media (max-width: 380px) {
+  .center-button {
+    justify-content:center !important;
+    align-items: center !important;
+    
+  }
+}
+
+
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.card-detail {
+  margin-bottom: 0.5em;
+}
+
+.card-actions {
+  margin-top: 1em;
+}
+
+.profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 0.5em;
+}
+/* _listusers.scss */
+.custom-datatable .p-datatable-thead {
+  display: table-header-group; /* Default display for headers */
+}
+
+.custom-datatable .p-datatable-tbody > tr > td {
+  display: table-cell; /* Default display for cells */
+  vertical-align: middle;
+}
+
+@media (max-width: 600px) {
+  .card.datatable-container .p-datatable .p-datatable-tbody > tr.card-row {
+    display: block;
+    width: 100%;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1em;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .mobile-label {
+    display: block !important;
+  font-weight: bold; /* Bold font for labels */
+  margin-bottom: 5px; /* Margin below labels */
+}
+  .user-profile,.user-actions{
+    text-align: center !important;
+  }
+   .card.datatable-container .p-datatable .p-datatable-tbody > tr.card-row > td {
+    display: block;
+     width: 100%;
+     padding: 0;
+    border: none; 
+   } 
+   
+
+  
+  .custom-datatable .p-datatable-thead {
+      display: none; /* Hide headers on small screens */
+  }
+
+  .custom-datatable .p-datatable-tbody > tr > td {
+      display: block; /* Display cells as block elements */
+      width: 100%; /* Full width for each cell */
+      text-align: left; /* Left-align text */
+      border: none; /* Remove borders */
+      padding: 10px 5px; /* Add padding for readability */
+  }
+
+  .custom-datatable .p-datatable-tbody > tr > td:before {
+      content: attr(data-label); /* Display the column header as a label */
+      float: left; /* Float label to the left */
+      font-weight: bold; /* Bold font for labels */
+      text-transform: capitalize; /* Capitalize labels */
+  }
+}
+
+
+.mobile-label {
+ display: none; /* Margin below labels */
+}
+.mobile-row {
+  display: flex; /* Flexbox for mobile rows */
+  flex-direction: column; /* Column direction */
+  padding: 10px; /* Padding for mobile rows */
+  /* Bottom border for separation */
+}
+
+
+
+.mobile-value {
+  margin-bottom: 2px; /* Margin below values */
+   /* Break words if necessary for better readability */
+}
+
+
+

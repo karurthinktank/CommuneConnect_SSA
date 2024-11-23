@@ -1,0 +1,12 @@
+runtime: nodejs18
+instance_class: F1
+
+handlers:
+ # serve all static files
+ - url: /(.*\..+)$
+   static_files: build/\1
+   upload: build/(.*\..+)$
+ # catch all handler to index.html
+ - url: /.*
+   static_files: build/index.html
+   upload: build/index.html

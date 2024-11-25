@@ -96,7 +96,7 @@ if os.getenv('GAE_APPLICATION', None):
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'tms',
+            'NAME': 'tms_ssa',
             'USER': CLOUDSQL_DB_USER,
             'PASSWORD': CLOUDSQL_DB_PWD,
             'HOST': '/cloudsql/{}'.format(CLOUDSQL_CONNECTION_NAME),
@@ -107,7 +107,7 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'tms_local',
+            'NAME': 'tms_ssa',
             'USER': 'postgres',
             'PASSWORD': 'Kaali@7299',
             'HOST': 'localhost',

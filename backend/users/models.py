@@ -13,6 +13,11 @@ class TMSUser(AbstractUser):
     REQUIRED_FIELDS = ['first_name', 'email']
 
 
+class Scripts(models.Model):
+    script_name = models.CharField(null=True, blank=True, max_length=150)
+    script_path = models.CharField(null=True, blank=True, max_length=250)
+
+
 class People(models.Model):
     # organization = models.ForeignKey()
     name = models.CharField(max_length=250)
@@ -20,6 +25,7 @@ class People(models.Model):
     member_id = models.IntegerField(unique=True)
     id_card_no = models.CharField(max_length=100, null=True, blank=True, unique=True)
     trust_card_no = models.CharField(max_length=100, null=True, blank=True, unique=True)
+    family_card_no = models.CharField(max_length=100, null=True, blank=True, unique=True)
     mobile_number = models.CharField(max_length=10, null=True, blank=True)
     deleted = models.BooleanField(default=0)
     receipt_no = models.CharField(max_length=100)
@@ -72,6 +78,5 @@ class FamilyMembers(models.Model):
     modified_at = models.DateTimeField(null=True)
     created_by = models.CharField(max_length=100)
     updated_by = models.CharField(max_length=100, null=True, blank=True)
-
 
 

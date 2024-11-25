@@ -12,7 +12,8 @@ from rest_framework import viewsets, status
 from django.contrib.auth.models import Group
 from rest_framework.response import Response
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
-from django.contrib.auth.base_user import get_random_string
+from django.utils.crypto import get_random_string
+
 from django.conf import settings
 
 from django.db.models import Q

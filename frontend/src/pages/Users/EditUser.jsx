@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 // Formik Validation
 import * as Yup from "yup";
 import { useFormik, FieldArray, FormikProvider, Formik, Field, ErrorMessage } from "formik";
-import { mobileRegExp } from "constants/constants";
+import { CAST_lIST, mobileRegExp } from "constants/constants";
 import { USER_URL } from "helpers/url_helper";
 import { GET, UPDATE_UPLOAD } from "helpers/api_helper";
 import {
@@ -89,6 +89,7 @@ function EditUser() {
             country: data?.country,
             state: data?.state,
             district: data?.district,
+            caste:data?.caste,
             taluk: data?.taluk,
             panchayat: data?.panchayat,
             village: data?.village,
@@ -114,6 +115,8 @@ function EditUser() {
             country: Yup.string().required("This field is required!"),
             state: Yup.string().required("This field is required!"),
             district: Yup.string().required("This field is required!"),
+            caste: Yup.string().required("This field is required!"),
+            
             mobile_number: Yup.string().matches(mobileRegExp, 'Invalid Mobile number!'),
             secondary_mobile_number: Yup.string().matches(mobileRegExp, 'Invalid Mobile number!'),
             std_code: Yup.number().nullable(true),
@@ -354,6 +357,26 @@ function EditUser() {
                                                         {editUserForm.touched.father_or_husband && editUserForm.errors.father_or_husband ? (
                                                             <FormFeedback type="invalid">{editUserForm.errors.father_or_husband}
                                                             </FormFeedback>
+                                                        ) : null}
+                                                    </div>
+                                                    <div className="mb-3">
+                                                        <Label className="form-label">குலம்<span className="text-danger">*</span></Label>
+                                                        <Input
+                                                            id="caste"
+                                                            name="caste"
+                                                            className="form-control"
+                                                            placeholder="Select caste"
+                                                            type="select"
+                                                            onChange={editUserForm.handleChange}
+                                                            onBlur={editUserForm.handleBlur}
+                                                            value={editUserForm.values.caste || ''}
+                                                            invalid={editUserForm.touched.caste && editUserForm.errors.caste ? true : false}
+                                                        >
+                                                            <option value="" disabled defaultValue="">குலத்தை தேர்ந்தெடுக்கவும்</option>
+                                                            {CAST_lIST.map((element) => (<option key={element} value={element}>{element}</option>))}
+                                                        </Input>
+                                                        {editUserForm.touched.caste && editUserForm.errors.caste ? (
+                                                            <FormFeedback type="invalid">{editUserForm.errors.caste}</FormFeedback>
                                                         ) : null}
                                                     </div>
                                                     <div className="mb-3">
@@ -601,7 +624,7 @@ function EditUser() {
                                                             {STATE_LIST.map((element) => (<option key={element} value={element}>{element}</option>))}
                                                         </Input>
                                                         {editUserForm.touched.state && editUserForm.errors.state ? (
-                                                            <FormFeedback type="invalid">{editUserForm.errors.district}</FormFeedback>
+                                                            <FormFeedback type="invalid">{editUserForm.errors.state}</FormFeedback>
                                                         ) : null}
                                                     </div>
                                                     <div className="mb-3">

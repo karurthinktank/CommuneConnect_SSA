@@ -98,6 +98,13 @@ function ViewUser() {
                                                     <strong>{data?.father_or_husband}</strong>
                                                 </div>
 
+                                                <div className="col-md-6 mb-3">
+                                                    <label>குலம்</label>
+                                                </div>
+                                                <div className="col-md-6 mb-3">
+                                                    <strong>{data?.caste}</strong>
+                                                </div>
+
 
                                                 <div className="col-md-6 mb-3">
                                                     <label>தற்போதைய முகவரி</label>

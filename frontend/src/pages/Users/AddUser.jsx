@@ -17,7 +17,7 @@ import { USER_URL } from "helpers/url_helper";
 import { POST, GET, UPLOAD } from "helpers/api_helper";
 import {
     DISTRICT_LIST, STATE_LIST, COUNTRY_LIST, RECEIPT_BOOK_NO, RELATIONSHIP, OCCUPATION,
-    GENDER, MARTIAL_STATUS
+    GENDER, MARTIAL_STATUS, CAST_lIST
 } from "constants/constants";
 import "../../App.css";
 import Sanscript from "@indic-transliteration/sanscript";
@@ -69,6 +69,7 @@ function AddUser() {
             phone_number: '',
             profile_image: '',
             gender: '',
+            caste: '',
             members: [{
                 member_name: '', aadhar_no: '', member_mobile_number: '', gender: '', relationship: '',
                 date_of_birth: '', martial_status: '', occupation: '', career_reference: '', blood_group: '', card_details: '',
@@ -88,6 +89,7 @@ function AddUser() {
             country: Yup.string().required("This field is required!"),
             state: Yup.string().required("This field is required!"),
             district: Yup.string().required("This field is required!"),
+            caste: Yup.string().required("This field is required!"),
             mobile_number: Yup.string()
                 .required('Mobile number is required')
                 .test('valid-mobile', 'Invalid mobile number', function (value) {
@@ -355,6 +357,27 @@ function AddUser() {
                                                             />
                                                             {addUserForm.touched.father_or_husband && addUserForm.errors.father_or_husband ? (
                                                                 <FormFeedback type="invalid">{addUserForm.errors.father_or_husband}
+                                                                </FormFeedback>
+                                                            ) : null}
+                                                        </div>
+                                                        <div className="mb-3">
+                                                            <Label className="form-label">குலம்<span className="text-danger">*</span></Label>
+                                                            <Input
+                                                                id="caste"
+                                                                name="caste"
+                                                                className="form-control"
+                                                                placeholder="Select Gender"
+                                                                type="select"
+                                                                onChange={addUserForm.handleChange}
+                                                                value={addUserForm.caste}
+                                                                invalid={addUserForm.touched.caste && addUserForm.errors.caste ? true : false}
+                                                            >
+                                                                <option value="" disabled defaultValue="" selected>குலத்தை தேர்ந்தெடுக்கவும்</option>
+                                                                {CAST_lIST.map((code) => (<option key={code} value={code}>{code}</option>))}
+
+                                                            </Input>
+                                                            {addUserForm.touched.caste && addUserForm.errors.caste ? (
+                                                                <FormFeedback type="invalid">{addUserForm.errors.caste}
                                                                 </FormFeedback>
                                                             ) : null}
                                                         </div>

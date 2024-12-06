@@ -38,6 +38,7 @@ class People(models.Model):
     permanent_address = models.TextField(null=True, blank=True)
     country = models.CharField(max_length=50)
     state = models.CharField(max_length=50)
+    caste = models.CharField(max_length=50, null=True)
     district = models.CharField(max_length=50)
     taluk = models.CharField(max_length=50, null=True, blank=True)
     panchayat = models.CharField(max_length=50, null=True, blank=True)

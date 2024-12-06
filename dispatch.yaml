@@ -21,3 +21,12 @@ dispatch:
     service: microfin-frontend
   - url: "microfin-frontend-dot-thinktank-tms-dev-env.as.r.appspot.com/static/*"
     service: microfin-frontend
+  - url: "frontend-ssa-dot-thinktank-tms-dev-env.as.r.appspot.com/*"
+    service: frontend-ssa
+  - url: "backend-ssa-dot-thinktank-tms-dev-env.as.r.appspot.com/api/*"
+    service: backend-ssa
+  - url: "pdfdownload-ssa-dot-thinktank-tms-dev-env.as.r.appspot.com/*"
+    service: pdfdownload-ssa
+  - url: "frontend-ssa-dot-thinktank-tms-dev-env.as.r.appspot.com/static/*"
+    service: frontend-ssa
+

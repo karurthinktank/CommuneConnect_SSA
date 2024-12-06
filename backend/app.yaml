@@ -1,6 +1,6 @@
 runtime: python311 # or another supported version
 instance_class: F1
-service: backend
+service: backend-ssa
 # entrypoint: gunicorn --bind 0.0.0.0:8080 tms.wsgi:application
 
 automatic_scaling:

@@ -16,7 +16,7 @@ import { useFormik } from "formik";
 import "../../assets/scss/_login.scss"
 // import images
 import logo from "assets/images/temple-right-logo.png";
-import bgbanner from "assets/images/login.jpeg";
+import bgbanner from "assets/images/login.jpg";
 import { GET, POST } from "../../helpers/api_helper";
 import { LOGIN_URL, USER } from "../../helpers/url_helper";
 import { ToastContainer } from 'react-toastify';

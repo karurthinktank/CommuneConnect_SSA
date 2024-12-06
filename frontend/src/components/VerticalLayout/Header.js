@@ -100,7 +100,7 @@ const Header = props => {
               <i className="fa fa-fw fa-bars" />
             </button>
               <div className='header-logo'>
-                <h2 className='mb-0 text-success fw-bold  p-2 ' >ஸ்ரீ புதுவாங்கலம்மன் </h2>
+                <h2 className='mb-0 text-success fw-bold  p-2 ' >ஸ்ரீ சுண்டக்கா செல்லாண்டியம்மன் </h2>
               </div>
               </div>
             {/* <form className="app-search d-none d-lg-block">
